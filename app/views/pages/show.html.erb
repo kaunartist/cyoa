@@ -1,0 +1,16 @@
+<%= stylesheet_link_tag "reading" %>
+<p id="notice"><%= notice %></p>
+
+<div class="wrapper">
+  <div class="storytitle"><%= @story.name %></div>
+  <div class="content">
+    <%= @page.content %>
+  </div>
+  <div class="links">
+    <%= render :partial => "links/list", :collection => @links %>
+  </div>
+  <br />
+</div>
+
+<%= link_to 'Edit', edit_page_path(@page) %> |
+<%= link_to 'Back', pages_path %>

@@ -1,0 +1,17 @@
+class CreatePages < ActiveRecord::Migration
+  def self.up
+    create_table :pages do |t|
+      t.text :content
+      t.references :story
+      t.integer :link1
+      t.integer :link2
+      t.integer :link3
+
+      t.timestamps
+    end
+  end
+
+  def self.down
+    drop_table :pages
+  end
+end

@@ -1,0 +1,35 @@
+.content {
+width: 450px;
+min-height: 450px;
+border: 1px solid black;
+border-bottom: none;
+font-family: "georgia", serif;
+padding: 10px;
+}
+
+.storytitle {
+font-family: "helvetica", "futura", "arial", serif;
+font-weight: bold;
+font-size: 2em;
+margin: 10 auto;
+padding-bottom: 20px;
+text-align: center;
+width: 462px;
+}
+
+.wrapper {
+width: 452px;
+margin: 0 auto;
+}
+
+.links {
+width: 450px;
+padding: 10px;
+border: 1px solid black;
+border-top: none;
+text-align: right;
+}
+
+.links a {
+text-decoration: none;
+}

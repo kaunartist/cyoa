@@ -1,0 +1,30 @@
+<%= form_for(@page) do |f| %>
+  <% if @page.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@page.errors.count, "error") %> prohibited this page from being saved:</h2>
+
+      <ul>
+      <% @page.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :content %><br />
+    <%= f.text_area :content %>
+  </div>
+  <div class="field">
+    <%= f.label :story %><br />
+    <%= collection_select(:page, :story_id, @stories, :id, :name, options = {:prompt => true}) %>
+  </div>
+
+  <%= render :partial => "links/listedit" %>
+  <%= link_to 'Add a link', :controller => "links", :action => "new", :page_id => @page.id %>
+  <br />
+  <br />
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

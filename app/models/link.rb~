@@ -1,0 +1,5 @@
+class Link < ActiveRecord::Base
+  belongs_to :page
+  has_many :pages
+  validates :page_id, :presence => true
+end

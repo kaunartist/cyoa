@@ -1,0 +1,17 @@
+<b>Links</b>
+<table>
+  <tr>
+    <th>Description</th>
+    <th>Destination</th>
+    <th></th>
+    <th></th>
+  </tr>
+<% @links.each do |link| %>
+  <tr>
+    <td><%= link.description %></td>
+    <td><%= link.destination %></td>
+    <td><%= link_to 'Edit', edit_link_path(link) %></td>
+    <td><%= link_to 'Delete', link, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
